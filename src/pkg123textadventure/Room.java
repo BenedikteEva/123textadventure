@@ -11,18 +11,31 @@ package pkg123textadventure;
  */
 public class Room {
      private String roomName;
-     private String roomDescription;
-     // random gold
-     private Room north;
-     private Room east;
-     private Room south;
-     private Room west;
+    private String roomDescription;
+    private int goldAmount;
+  
+   
+    public int getGoldAmount() {
+        return goldAmount;
+    }
+
+    public void setGoldAmount(int goldAmount) {
+        this.goldAmount  = goldAmount;
+    }
+    public void addGold (int GoldTotal) {
+        GoldTotal += goldAmount;
+    }
+
+    public Room(String roomName, String roomDescription, int goldAmount) {
+        this.roomName = roomName;
+        this.roomDescription = roomDescription;
+        this.goldAmount = goldAmount;
+        
+    }
 
     public Room(String roomName) {
         this.roomName = roomName;
     }
-     
-    
 
     public String getRoomName() {
         return roomName;
@@ -39,40 +52,12 @@ public class Room {
     public void setRoomDescription(String roomDescription) {
         this.roomDescription = roomDescription;
     }
+  
 
-    public Room getNorth() {
-        return north;
+
+   @Override
+    public String toString() {
+        return "Room{" + "roomName=" + roomName + ", roomDescription=" + roomDescription + ", goldAmount=" + goldAmount + '}';
     }
 
-    public void setNorth(Room north) {
-        this.north = north;
-    }
-
-    public Room getEast() {
-        return east;
-    }
-
-    public void setEast(Room east) {
-        this.east = east;
-    }
-
-    public Room getSouth() {
-        return south;
-    }
-
-    public void setSouth(Room south) {
-        this.south = south;
-    }
-
-    public Room getWest() {
-        return west;
-    }
-
-    public void setWest(Room west) {
-        this.west = west;
-    }
-     
-     
-     
-     
 }
