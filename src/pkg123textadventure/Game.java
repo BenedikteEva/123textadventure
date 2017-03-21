@@ -12,7 +12,28 @@ package pkg123textadventure;
 public class Game {
   
       public void go() {
+        
+ boundary b = new boundary();
+    Room start = new Room("Start", "start", 0);
+    Room r1 = new Room("rum1", "Entreen", 1);
+    Room r2 = new Room("rum2", "2", 1);
+    Room r3 = new Room("rum3", "3", 3);
+    Room r4 = new Room("rum4", "4", 10);
+    Room r5 = new Room("rum5", "5", 10);
+    Room r6 = new Room("rum6", "6t", -2);
+    Room r7 = new Room("rum7", "7", 50);
+    Room r8 = new Room("rum8", "8", 2);
+    Room r9 = new Room("rum9", "9", 21);
+    Room r10 = new Room("rum10", "10", 3);
+    Room r11 = new Room("rum11", "11", 4);
+    Room r12 = new Room("rum12", "12", 5);
+    Room r13 = new Room("rum13", "13", 6);
+    Room r14 = new Room("rum14", "14", 12);
+    Room r15 = new Room("rum15", "15", 100);
+    Room r16 = new Room("rum16", "16", 1);
+    Room exit = new Room("Exit", "exit", 0);
 
+    public void go() {
         boolean  boo1, boo2, boo3, boo4, boo5, boo6, boo7, boo8, boo9, boo10, boo11, boo12, boo13, boo14, boo15, boo16;
       
         while (boo1 = true) { 
