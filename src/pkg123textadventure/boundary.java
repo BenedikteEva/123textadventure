@@ -13,49 +13,53 @@ import java.util.Scanner;
  */
 public class boundary {
         
-    Player player1 = new Player();
-    Room rum = new Room();
+          
+    Player player1=new Player();
     Scanner userInput = new Scanner(System.in);
     int roomChoice;
+    String name;
+    int roomChoiceIngame;    
+
+   
     public void introduction(){
-        String name;
+    
         
-        System.out.println("Velkommen spillet");
-        System.out.println("Hvad hedder du ");
+        System.out.println("Velkommen til spillet");
+        System.out.println("Hvad hedder du? ");
         name = userInput.nextLine();
         
         player1.setName(name);
     }    
-    
+    public String name(){
+        return name;
+        }
     // choose room
     
-    public void chooseRoom(){
+    public void chooseRoomStart(){
+  
+        System.out.println("Hej   " + name +"   Du står nu foran indgangen ");
+        System.out.println("Vil du ind i labyrinten eller tør du ikke");
+        System.out.println("Tast 0 for 'tør ikke'");
+        System.out.println("Tast 1 for at komme ind");
         Scanner rumA = new Scanner(System.in);
+        roomChoice = rumA.nextInt();
         
-        System.out.println("Hvilke vej vil du gå");
+         
+                     
+    
+        }
+      public void chooseRoomIngame(){
+       
+             Scanner rumB = new Scanner(System.in);
+         
+       
         System.out.println("Tast 1 for Nord");
         System.out.println("Tast 2 for Vest");
         System.out.println("Tast 3 for Syd");
         System.out.println("Tast 4 for Øst");
         
-        roomChoice = rumA.nextInt();
+       roomChoiceIngame = rumB.nextInt();
         
-        switch (roomChoice) {
-            case 1:
-                // call room 1
-              
-                break;
-            case 2:
-                // call room 2
-               
-                break;
-     
-        }
-        
+       
     }
-
-    // rum1
- 
-    
-   
 }
