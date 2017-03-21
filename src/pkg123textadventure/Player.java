@@ -13,7 +13,14 @@ public class Player {
     
     private String name;
     private int health;
-    private String location;
+
+  
+
+    Player() { 
+        this.name = name;
+        this.health = health;
+     
+    }
 
     public String getName() {
         return name;
@@ -30,14 +37,7 @@ public class Player {
     public void setHealth(int health) {
         this.health = health;
     }
-    
-    
-    public void setLocation(String location){
-        this.location = location;
-    }
-    
-    public String getLocation(){
-        return location;
-    }
-  
+
+ 
+
 }
