@@ -22,12 +22,29 @@ public class Main {
     
     public static void main(String[] args) {
         
+   boolean playGame;
         boundary b = new boundary();
+        Game g = new Game();
        
         b.introduction();
+        b.chooseRoomStart();
+         if (b.roomChoice==1) {
+             playGame=true;
+              while (playGame=true){
+            g.go();
+          }  
+         }
+         if (b.roomChoice==0) {
+             playGame=false; 
+             while (playGame= false){
+        System.exit(0);
+
+         }
+         
+         
         
-        b.chooseRoom();
         
+}
         
         
     }
