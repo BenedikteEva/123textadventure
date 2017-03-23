@@ -10,56 +10,46 @@ import java.util.Scanner;
 /**
  *
  * @author Zack
- */
-public class boundary {
+ **/
+public class Boundery {
+    public void intro() {
+        System.out.println(
+                         ">> Welcome to Text Based Adventure Game! <<\n\n"
+                        + "The objective of this game is to find your way through\n" 
+                        + "the dungeon and collect as much gold as possible. \n\n"
+                        + "You don't have a map and only a flaslight at your \n"
+                        + "disposal to light up your quest.\n"
+                        + "At any time during your quest, type help and get some options\n"
+                        + "You forgot to eat so you have to finish your quest\n"
+                        + "before you faint and is eaten by moths and bats \n"
+                        + "and big ugly spiders and then eventually die,  \n"
+                        + "which in that case you have lost. \n"
+                        + "Your health is at 100% when you start and you will\n"
+                        + "gradually lose your health while your walking around.\n"
+                        + "because you are hungry and no food is available\n"
+                        + "You have won the game when you have found the Exit\n"
+                        + "and collected at least 20 goldpieces.\n\n\n\n");
         
-          
-    Player player1=new Player();
-    Scanner userInput = new Scanner(System.in);
-    int roomChoice;
-    String name;
-    int roomChoiceIngame;    
-
-   
-    public void introduction(){
-    
-        
-        System.out.println("Velkommen til spillet");
-        System.out.println("Hvad hedder du? ");
-        name = userInput.nextLine();
-        
-        player1.setName(name);
-    }    
-    public String name(){
-        return name;
-        }
-    // choose room
-    
-    public void chooseRoomStart(){
-  
-        System.out.println("Hej   " + name +"   Du står nu foran indgangen ");
-        System.out.println("Vil du ind i labyrinten eller tør du ikke");
-        System.out.println("Tast 0 for 'tør ikke'");
-        System.out.println("Tast 1 for at komme ind");
-        Scanner rumA = new Scanner(System.in);
-        roomChoice = rumA.nextInt();
-        
-         
-                     
-    
-        }
-      public void chooseRoomIngame(){
-       
-             Scanner rumB = new Scanner(System.in);
-         
-       
-        System.out.println("Tast 1 for Nord");
-        System.out.println("Tast 2 for Vest");
-        System.out.println("Tast 3 for Syd");
-        System.out.println("Tast 4 for Øst");
-        
-       roomChoiceIngame = rumB.nextInt();
-        
-       
     }
+    
+    public void chooseDirection () {
+                
+                
+                
+                System.out.println("Where do you wanna go");
+                System.out.println("Press n for north");
+                System.out.println("Press s for south");
+                System.out.println("Press e for east");
+                System.out.println("Press w for west");
+                
+               
+    }
+    public void helpMenu() {
+                    
+                  
+                    
+                      
+                    }
 }
+
+
