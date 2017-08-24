@@ -79,13 +79,19 @@ public class Sem2HashMapTest {
        
     }
     
-// planen er at putte 2 keyvalue par ind som har den samme rest (Søren og Andres 
+// denne test er til når vores hashmap ikke håndterer kollisioner. 
+// Det vi ser er at testen viser en out of bounds exeption selvom der 
+//   kun er 3 keys i et array størrelse 3, men er ikke helt sikker på 
+// at det er nok som failed test betragtet
+    
    @Test
-    public void testCollisions(){
-        Sem2HashMap instance2 = new Sem2HashMap();
-       instance2.put("Søren", new Address("Dumpedalsvej 20"));
-       instance2.put("Andreas", new Address("ClosetocphLyngby 1"));
-       assertEquals(instance2.get("Søren"),instance2.get("Andreas") );
+    public void testPutCollisions(){
+       instance.put("Winnie", new Address("Syvmileskoven1"));
+       instance.put("Andreas", new Address("ClosetocphLyngby 1"));
+      instance.get("Søren");
+      instance.get("Andreas");
+      instance.get("Winnie");
+    
     }
 
     @Test
